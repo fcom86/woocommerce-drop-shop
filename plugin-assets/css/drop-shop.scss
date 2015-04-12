@@ -1,0 +1,392 @@
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+$cart_height: 140px;
+$cart_hide: -130px;
+
+.group:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+
+.woocommerce-drop-shop-wrapper {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	height:$cart_height;
+	z-index:99999999;
+	box-shadow:0 1px 5px rgba(0,0,0,.9);
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+	transition:all 0.3s ease-in;
+	
+	.woocommerce-drop-shop-center-wrap {
+		max-width:960px;
+		margin:0 auto;
+		position:relative;
+		text-align:center;		
+		background:none;
+
+		&.show-hot-zone {
+			background-color:#ddd;
+		}
+
+		.woocommerce-drop-shop-inner-wrap {
+			height:$cart_height;
+			position:relative;
+			padding:5px 0;
+			display:inline-block;
+			width:auto;
+			text-align:center;
+
+			.woocommerce-drop-shop-inlay {
+				position:relative;
+				height:100%;
+				float:left;
+				padding:0 30px;
+				display:inline-block;
+
+				&.highlight {
+
+				}
+
+				.woocommerce-drop-shop-cart-empty {
+					width:150px;
+					text-align:center;
+					margin:0 auto;
+					height:$cart_height;
+					padding-top:30px;
+
+					span {
+						display:block;
+						margin-bottom:10px;
+						font-size:16px;
+					}
+
+					i {
+						font-size:40px;
+						display:inline;
+					}
+				}
+				
+				.woocommerce-cart {
+					margin:20px auto 0 auto;
+					position:relative;
+					float:left;
+					display:inline-block;
+					visibility:hidden;
+					height:100px;
+
+					ul {
+						li {
+							float:left;
+							width:80px;
+							margin:5px 4px;
+							padding:0;
+							position:relative;
+
+							.woocommerce-drop-shop-item-count {
+								position:absolute;
+								bottom:0;
+								left:0;
+								background-color:#666;
+								color:#fff;
+								display:inline-block;
+								text-align:center;
+								vertical-align:middle;
+								padding:2px 5px;
+								font-size:11px;
+							}
+
+							.woocommerce-drop-shop-item-remover {
+								position:absolute;
+								top:-7px;
+								right:-5px;
+								font-size:24px;
+								color:#800000;
+
+								&:hover {
+									color:#333;
+								}
+							}
+						}
+					}
+				} // .woocommerce-cart
+
+				.woocommerce-drop-shop-prev {
+					position:absolute;
+					top:50%;
+					left:-20px;
+					font-size:40px;
+					cursor:pointer;
+					height:40px;
+					margin-top:-20px;
+					display:none;
+
+					&::before {
+						cursor:pointer;
+					}
+
+					&:hover {
+						color:#999;
+					}
+
+					&.disabled {
+						display:none !important;
+					}
+				}
+
+				.woocommerce-drop-shop-next {
+					position:absolute;
+					top:50%;
+					right:0;
+					font-size:40px;
+					height:40px;
+					margin-top:-20px;
+					cursor:pointer;
+					display:none;
+
+					&::before {
+						cursor:pointer;
+					}
+
+					&:hover {
+						color:#999;
+					}
+
+					&.disabled {
+						display:none !important;
+					}
+				}
+
+			} // .woocommerce-drop-shop-inlay
+			
+			.woocommerce-drop-shop-action {
+				position:relative;
+				float:left;
+				height:80px;
+				top:50%;
+				margin-top:-40px;
+				margin-left:40px;
+
+				.woocommerce-drop-shop-cart-total {
+					margin-bottom:10px;
+				}
+
+				a {
+					font-size: 100%;
+					margin: 0;
+					line-height: 1;
+					cursor: pointer;
+					position: relative;
+					font-family: inherit;
+					text-decoration: none;
+					overflow: visible;
+					padding: .618em 1em;
+					font-weight: 700;
+					border-radius: 3px;
+					left: auto;
+					color:#515151;
+					background-color:#ebe9eb;
+					border: 0;
+					white-space: nowrap;
+					display: inline-block;
+					background-image: none;
+					box-shadow: none;
+					-webkit-box-shadow: none;
+					text-shadow: none;	
+
+					&:hover {
+						background-color:#dad8da;
+						text-decoration: none;
+						background-image: none;
+						color:#9f9f9f;
+					}					
+				}
+			} // .woocommerce-drop-shop-action
+
+		} // .woocommerce-drop-shop-inner-wrap
+	} // .woocommerce-drop-shop-center-wrap
+
+	.woocommerce-drop-shop-tab {
+		position:absolute;
+		right:20px;
+		top:-36px;
+		font-size:30px;
+		color:#333;
+		width:50px;
+		height:36px;
+		line-height:36px;
+		background-color:#fff;
+		box-shadow:0 -1px 1px rgba(0,0,0,.4);
+		border-top-right-radius:4px;
+		border-top-left-radius:4px;
+		cursor:pointer;
+		display:block;
+		
+		&::before {
+			color:#666;
+			transition:color 0.5s ease;
+		}
+
+		&:hover::before {
+			color:#333;
+		}
+	} // .woocommerce-drop-shop-tab
+
+	&.hide {
+		bottom:$cart_hide;
+	}
+
+	&.show {
+		bottom:0;
+	}
+	
+	.woocommerce-drop-shop-dragdrop-spinner {
+		position:absolute;
+		left:50%;
+		top:50%;
+		width:40px;
+		height:40px;
+		margin-left:-20px;
+		margin-top:-20px;
+		display:none;
+		background-color:#000;
+		line-height:40px;
+		text-align:center;
+		border-radius:5px;
+
+		&::before {
+			animation: spin 2s infinite linear;
+			font-size:30px;
+			color:#ffffff;
+		}
+	}
+
+	.wcds-tooltip {
+		display:block;
+	}
+} // .woocommerce-drop-shop-wrapper
+
+.woocommerce-drop-shop-mask {
+	background-color:#000;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:999999999;
+	left:0;
+	top:0;
+}
+
+.woocommerce-drop-shop-variation-popup-container {
+	background-color:#fff;
+	text-align:center;
+	padding:20px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-left:-150px;
+	width:300px;
+	z-index:9999999999;
+	box-shadow:0 0 10px rgba(0,0,0,0.9);
+	border-radius:10px;
+
+	label {
+		color:#666;
+		font-size:14px !important;
+		font-weight:normal !important;
+		text-shadow:none !important;
+	}
+
+	table, table th, table td {
+		border-color:#666 !important;
+		background:none !important;
+		padding:5px !important;
+	}
+
+	table td.label {
+		text-align:right;
+	}
+
+	form.variations_form {
+		margin:10px 0;
+	}
+
+	.woocommerce-drop-shop-cart-msg {
+		color:#666;
+		font-size:14px;
+		text-align:center;
+		line-height:20px;
+	}
+
+	table.variations {
+		background:none !important;
+		box-shadow:none !important;
+		margin-bottom:5px !important;
+		width:100%;
+	}
+
+	a.woocommerce-drop-shop-close-button {
+		display:block;
+		position:absolute;
+		top:1px;
+		right:0;
+		text-decoration:none;
+		color:#800000;
+
+		&:hover {
+			color:#333;
+		}
+	}
+
+	p.woocommerce-drop-shop-not-selected-msg {
+		line-height:20px;
+		font-size:14px;
+		color:#666;
+		margin-top:20px;
+	}
+
+	.woocommerce-drop-shop-add-button {
+		text-decoration:none !important;
+		border-radius:3px;
+		padding:2px 8px;
+		text-align:center;
+		vertical-align:middle;
+		color:#fff !important;
+		border:1px solid #BB0400;
+		font-size:12px;
+		box-shadow:0px 0px 1px rgba(0,0,0,0.3);
+		background:#FF5911;
+		background: -webkit-linear-gradient(rgba(255,89,17,1) 0%, rgba(221,38,0,1) 100%);
+		background: -o-linear-gradient(rgba(255,89,17,1) 0%, rgba(221,38,0,1) 100%);
+		background: linear-gradient(rgba(255,89,17,1) 0%, rgba(221,38,0,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5911', endColorstr='#dd2600',GradientType=0 );
+
+		&:hover {
+			text-decoration:none !important;
+			background: rgb(237,75,16);
+			background: -webkit-linear-gradient(rgba(237,75,16,1) 0%, rgba(204,30,0,1) 100%);
+			background: -o-linear-gradient(rgba(237,75,16,1) 0%, rgba(204,30,0,1) 100%);
+			background: linear-gradient(rgba(237,75,16,1) 0%, rgba(204,30,0,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed4b10', endColorstr='#cc1e00',GradientType=0 );
+		}
+	}
+
+	.woocommerce-drop-shop-detail-link {
+		font-size:11px;
+		text-decoration:underline !important;
+		color:#a3619f;
+		margin-left:5px;
+
+		&:hover {
+			color:#666;
+		}
+	}
+} // .woocommerce-drop-shop-variation-popup-container
