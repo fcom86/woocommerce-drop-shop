@@ -39,11 +39,11 @@ class WC_Drop_Shop {
 		if ( is_woocommerce_active() ) {
 			
 			if ( is_admin() ) {
-				include_once( 'classes/class-wc-drop-shop-admin.php' );
+				include_once( 'includes/class-wc-drop-shop-admin.php' );
 
-				include_once( 'classes/class-wc-drop-shop-frontend-ajax.php' );
+				include_once( 'includes/class-wc-drop-shop-frontend-ajax.php' );
 			} else {
-				include_once( 'classes/class-wc-drop-shop-frontend.php' );
+				include_once( 'includes/class-wc-drop-shop-frontend.php' );
 			}
 
 		} else {

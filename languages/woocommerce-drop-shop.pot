@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Drop Shop\n"
-"POT-Creation-Date: 2015-04-12 14:58-0800\n"
-"PO-Revision-Date: 2015-04-12 14:58-0800\n"
+"POT-Creation-Date: 2015-04-14 15:16-0800\n"
+"PO-Revision-Date: 2015-04-14 15:17-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -19,104 +19,104 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: classes/class-wc-drop-shop-admin.php:29
+#: includes/class-wc-drop-shop-admin.php:29
 msgid "Drop Shop"
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:66
+#: includes/class-wc-drop-shop-admin.php:66
 msgid "Drop Shop Options"
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:73
+#: includes/class-wc-drop-shop-admin.php:73
 msgid "Show on Shop Pages"
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:74
+#: includes/class-wc-drop-shop-admin.php:74
 msgid "Enable to only show the drop cart on shop pages."
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:81
+#: includes/class-wc-drop-shop-admin.php:81
 msgid "Shopping Cart Only"
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:82
+#: includes/class-wc-drop-shop-admin.php:82
 msgid ""
 "Enable to only display the cart and disables all drag and drop functionality."
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:89
+#: includes/class-wc-drop-shop-admin.php:89
 msgid "Show Product Quantity"
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:90
+#: includes/class-wc-drop-shop-admin.php:90
 msgid "Enable to show the quantity of the product in the cart via a bubble."
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:97
+#: includes/class-wc-drop-shop-admin.php:97
 msgid "Show Product Title"
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:98
+#: includes/class-wc-drop-shop-admin.php:98
 msgid ""
 "Enable to show the title of the product in a tooltip on hover in the cart."
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:105
+#: includes/class-wc-drop-shop-admin.php:105
 msgid "Autohide Duration"
 msgstr ""
 
-#: classes/class-wc-drop-shop-admin.php:106
+#: includes/class-wc-drop-shop-admin.php:106
 msgid ""
 "Enter how many seconds you want before the cart will autohide.  Enter 0 to "
 "disable which will always show."
 msgstr ""
 
-#: classes/class-wc-drop-shop-frontend-ajax.php:175
+#: includes/class-wc-drop-shop-frontend-ajax.php:175
 msgid "Product cannot be added"
 msgstr ""
 
-#: classes/class-wc-drop-shop-frontend-ajax.php:177
-#: classes/class-wc-drop-shop-frontend-ajax.php:208
-#: classes/class-wc-drop-shop-frontend-ajax.php:227
-#: classes/class-wc-drop-shop-frontend-ajax.php:243
-#: classes/class-wc-drop-shop-frontend-ajax.php:259
+#: includes/class-wc-drop-shop-frontend-ajax.php:177
+#: includes/class-wc-drop-shop-frontend-ajax.php:208
+#: includes/class-wc-drop-shop-frontend-ajax.php:227
+#: includes/class-wc-drop-shop-frontend-ajax.php:243
+#: includes/class-wc-drop-shop-frontend-ajax.php:259
 msgid "Close"
 msgstr ""
 
-#: classes/class-wc-drop-shop-frontend-ajax.php:203
+#: includes/class-wc-drop-shop-frontend-ajax.php:203
 msgid "This product has options. Please select the options below."
 msgstr ""
 
-#: classes/class-wc-drop-shop-frontend-ajax.php:206
+#: includes/class-wc-drop-shop-frontend-ajax.php:206
 msgid "Add to Cart"
 msgstr ""
 
-#: classes/class-wc-drop-shop-frontend-ajax.php:207
-#: classes/class-wc-drop-shop-frontend-ajax.php:226
-#: classes/class-wc-drop-shop-frontend-ajax.php:242
-#: classes/class-wc-drop-shop-frontend-ajax.php:258
+#: includes/class-wc-drop-shop-frontend-ajax.php:207
+#: includes/class-wc-drop-shop-frontend-ajax.php:226
+#: includes/class-wc-drop-shop-frontend-ajax.php:242
+#: includes/class-wc-drop-shop-frontend-ajax.php:258
 msgid "More Detail"
 msgstr ""
 
-#: classes/class-wc-drop-shop-frontend-ajax.php:224
+#: includes/class-wc-drop-shop-frontend-ajax.php:224
 msgid ""
 "Sorry, there was an issue with adding this product to the cart.  Please "
 "click the more detail link button and try there."
 msgstr ""
 
-#: classes/class-wc-drop-shop-frontend-ajax.php:240
+#: includes/class-wc-drop-shop-frontend-ajax.php:240
 msgid ""
 "This is a grouped product.  Please go to the product detail page to add this "
 "item to the cart."
 msgstr ""
 
-#: classes/class-wc-drop-shop-frontend-ajax.php:256
+#: includes/class-wc-drop-shop-frontend-ajax.php:256
 msgid ""
 "This is an external product.  Please click on the detail link to go to the "
 "product's page."
 msgstr ""
 
-#: classes/class-wc-drop-shop-frontend.php:66
+#: includes/class-wc-drop-shop-frontend.php:66
 msgid "Please select all options before clicking on add to cart."
 msgstr ""
 
