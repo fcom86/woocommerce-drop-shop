@@ -17,17 +17,29 @@ Adds a drag and drop cart to your footer for easier and fun purchase.
 
 Adds a drag and drop cart to your footer for easier and fun purchase.
 
+1. Be sure WooCommerce plugin is already installed.
+2. Upload the folder `woocommerce-drop-shop` to the `/wp-content/plugins/` directory
+3. Activate the plugin through the 'Plugins' menu in WordPress
+4. Go to WooCommerce->settings->products tab->drop shop section to set your settings
+
+There is no active support for this plugin here.  Please go here to contribute https://github.com/roykho/woocommerce-drop-shop
+
 == Installation ==
 
 1. Be sure WooCommerce plugin is already installed.
 2. Upload the folder `woocommerce-drop-shop` to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in WordPress
+4. Go to WooCommerce->settings->products tab->drop shop section to set your settings
 
 == Frequently Asked Questions ==
 
 = It is not working at all! =
 
 First try switching your theme to a WordPress default theme such as Twenty Twelve Theme and re-test.  It is possible that your theme is conflicting with this plugin.
+
+= I need help! =
+
+Please go here to submit your issue and be as detailed as possible stating each step to reproduce the issue. https://github.com/roykho/woocommerce-drop-shop
 
 == Screenshots ==
 
