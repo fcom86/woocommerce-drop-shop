@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Drop Shop
 Plugin URI: https://wordpress.org/plugins/woocommerce-drop-shop/
 Description: Adds a drag and drop cart to your footer for easier and fun purchase.
-Version: 1.0.0
+Version: 1.0.1
 Author: Roy Ho
 Author URI: http://royho.me
 

@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 WordPress requires at least: 4.1
 Tested up to: 4.1
 WooCommerce requires at least: 2.3.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Author URI: http://royho.me
 Plugin URI: https://wordpress.org/plugins/woocommerce-drop-shop/
 License: GPLv3
@@ -46,6 +46,9 @@ Please go here to submit your issue and be as detailed as possible stating each 
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 1.0.1 =
+Updated readme.txt to provide more instructions
 
 = 1.0.0 =
 Release
