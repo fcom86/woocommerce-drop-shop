@@ -3,6 +3,7 @@
  * Renders the footer cart
  *
  * @package WC_Drop_Shop
+ * @version 1.0.0
  *
  */
 if ( ! defined( 'ABSPATH' ) ) {
