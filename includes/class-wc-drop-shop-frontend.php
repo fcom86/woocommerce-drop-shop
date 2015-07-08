@@ -79,6 +79,7 @@ class WC_Drop_Shop_Frontend {
 	 *
 	 * @access public
 	 * @since 1.0.0
+	 * @version 1.0.2
 	 * @return boolean true
 	 */
 	public function render_cart() {
@@ -86,7 +87,7 @@ class WC_Drop_Shop_Frontend {
 		
 		$settings = WC_Drop_Shop_Helper::get_settings();
 
-		if ( 'yes' === $settings['show_on_shop'] && ! is_shop() ) {
+		if ( 'yes' === $settings['show_on_shop'] && ! is_shop() && ! is_product_category() && ! is_product() ) {
 			return;
 		}
 
