@@ -1,18 +1,17 @@
 <?php
-/*
-Plugin Name: WooCommerce Drop Shop
-Plugin URI: https://wordpress.org/plugins/woocommerce-drop-shop/
-Description: Adds a drag and drop cart to your footer for easier and fun purchase.
-Version: 1.0.2
-Author: Roy Ho
-Author URI: http://royho.me
-
-Copyright: (c) 2015 Roy Ho
-
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-
-*/
+/**
+ * Plugin Name: WooCommerce Drop Shop
+ * Plugin URI: https://wordpress.org/plugins/woocommerce-drop-shop/
+ * Description: Adds a drag and drop cart to your footer for easier and fun purchase.
+ * Version: 1.0.2
+ * Author: Roy Ho
+ * Author URI: http://royho.me
+ * Text Domain: woocommerce-drop-shop
+ * Domain Path: /languages
+ * Copyright: (c) 2015 Roy Ho
+ * License: GNU General Public License v3.0
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ */
 
 if ( ! defined( 'ABSPATH' ) ) { 
 	exit; // no direct access
