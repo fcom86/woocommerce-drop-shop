@@ -1,0 +1,20 @@
+{
+  "name": "woocommerce-drop-shop",
+  "version": "0.0.0",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "*",
+    "concat": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "jshint-stylish": "*"
+  }
+}

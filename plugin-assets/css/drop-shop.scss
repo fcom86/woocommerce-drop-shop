@@ -1,6 +1,136 @@
+@-webkit-keyframes spin {
+	from {
+	-ms-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-ms-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	}
+	to {
+	-ms-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	-ms-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	}
+}
+
+@-moz-keyframes spin {
+	from {
+	-ms-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-ms-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	}
+	to {
+	-ms-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	-ms-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	}
+}
+
+@-ms-keyframes spin {
+	from {
+	-ms-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-ms-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	}
+	to {
+	-ms-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	-ms-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	}
+}
+
+@-o-keyframes spin {
+	from {
+	-ms-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-ms-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	}
+	to {
+	-ms-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	-ms-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	}
+}
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(359deg); }
+	from {
+	-ms-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-ms-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	}
+	to {
+	-ms-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	-ms-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	}
 }
 
 $cart_height: 140px;
@@ -89,7 +219,7 @@ $cart_hide: -130px;
 							margin:5px 4px;
 							padding:0;
 							position:relative;
-
+							list-style:none;
 							.woocommerce-drop-shop-item-count {
 								position:absolute;
 								bottom:0;
@@ -262,9 +392,14 @@ $cart_hide: -130px;
 		border-radius:5px;
 
 		&::before {
+			-webkit-animation: spin 2s infinite linear;
+			-moz-animation: spin 2s infinite linear;
+			-ms-animation: spin 2s infinite linear;
+			-o-animation: spin 2s infinite linear;
 			animation: spin 2s infinite linear;
 			font-size:30px;
 			color:#ffffff;
+			display:inline-block;
 		}
 	}
 
@@ -296,7 +431,6 @@ $cart_hide: -130px;
 	width:300px;
 	z-index:9999999999;
 	box-shadow:0 0 10px rgba(0,0,0,0.9);
-	border-radius:10px;
 
 	label {
 		color:#666;
@@ -309,6 +443,7 @@ $cart_hide: -130px;
 		border-color:#666 !important;
 		background:none !important;
 		padding:5px !important;
+		border:none;
 	}
 
 	table td.label {
@@ -356,26 +491,15 @@ $cart_hide: -130px;
 	.woocommerce-drop-shop-add-button {
 		text-decoration:none !important;
 		border-radius:3px;
-		padding:2px 8px;
+		padding:.618em 1em;
 		text-align:center;
 		vertical-align:middle;
 		color:#fff !important;
-		border:1px solid #BB0400;
 		font-size:12px;
-		box-shadow:0px 0px 1px rgba(0,0,0,0.3);
-		background:#FF5911;
-		background: -webkit-linear-gradient(rgba(255,89,17,1) 0%, rgba(221,38,0,1) 100%);
-		background: -o-linear-gradient(rgba(255,89,17,1) 0%, rgba(221,38,0,1) 100%);
-		background: linear-gradient(rgba(255,89,17,1) 0%, rgba(221,38,0,1) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5911', endColorstr='#dd2600',GradientType=0 );
-
+		background:#a46497;
 		&:hover {
 			text-decoration:none !important;
-			background: rgb(237,75,16);
-			background: -webkit-linear-gradient(rgba(237,75,16,1) 0%, rgba(204,30,0,1) 100%);
-			background: -o-linear-gradient(rgba(237,75,16,1) 0%, rgba(204,30,0,1) 100%);
-			background: linear-gradient(rgba(237,75,16,1) 0%, rgba(204,30,0,1) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed4b10', endColorstr='#cc1e00',GradientType=0 );
+			background:#935386;
 		}
 	}
 

@@ -186,8 +186,9 @@ class WC_Drop_Shop_Frontend_Ajax {
 			case 'variable' :
 				// check if variation is set
 				if ( empty( $variation_id ) ) {
-					// get the variation select dropdown html
+					remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation_add_to_cart_button', 20 );
 					
+					// get the variation select dropdown html
 					ob_start();
 					wc_get_template( 'single-product/add-to-cart/variable.php', array(
 						'available_variations' => $product->get_available_variations(),
