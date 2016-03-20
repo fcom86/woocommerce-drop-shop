@@ -5927,7 +5927,7 @@ jQuery( document ).ready( function( $ ) {
 					revert: 'invalid'
 				});
 				
-				var droppableArea = $( '.woocommerce-drop-shop-inlay', mainContainer );
+				var droppableArea = $( '.woocommerce-drop-shop-center-wrap', mainContainer );
 
 				// set the drop spot in the cart and handle add to cart ajax
 				droppableArea.droppable( {
