@@ -3,9 +3,9 @@ Contributors: royho
 Tags: woocommerce, products, drop shop, dropshop, drag and drop, roy ho
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YQYWW2ACXW89E
 WordPress requires at least: 4.1
-Tested up to: 4.1
+Tested up to: 4.4
 WooCommerce requires at least: 2.3.0
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Author URI: http://royho.me
 Plugin URI: https://wordpress.org/plugins/woocommerce-drop-shop/
 License: GPLv3
@@ -45,10 +45,16 @@ Please go here to submit your issue and be as detailed as possible stating each 
 
 == Upgrade Notice ==
 
+= 1.0.3 =
+Fix - Add to cart not working when not logged in.
+
 = 1.0.2 =
 Tweak - Show cart in product category and single pages
 
 == Changelog ==
+
+= 1.0.3 | 3/20/16 =
+Fix - Add to cart not working when not logged in.
 
 = 1.0.2 | 7/8/15 =
 Tweak - Show cart in product category and single pages
