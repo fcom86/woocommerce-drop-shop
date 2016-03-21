@@ -20,16 +20,14 @@ class WC_Drop_Shop_Frontend_Ajax {
 	public function __construct() {
 		self::$_this = $this;
 
-		if ( is_admin() ) {
-			add_action( 'wp_ajax_nopriv_wc_drop_shop_refresh', array( $this, 'refresh' ) );
-			add_action( 'wp_ajax_wc_drop_shop_refresh', array( $this, 'refresh' ) );
+		add_action( 'wp_ajax_nopriv_wc_drop_shop_refresh', array( $this, 'refresh' ) );
+		add_action( 'wp_ajax_wc_drop_shop_refresh', array( $this, 'refresh' ) );
 
-			add_action( 'wp_ajax_nopriv_wc_drop_shop_remove_item', array( $this, 'remove_item' ) );
-			add_action( 'wp_ajax_wc_drop_shop_remove_item', array( $this, 'remove_item' ) );
-			
-			add_action( 'wp_ajax_nopriv_wc_drop_shop_ajax_add_to_cart', array( $this, 'add_to_cart' ) );
-			add_action( 'wp_ajax_wc_drop_shop_ajax_add_to_cart', array( $this, 'add_to_cart' ) );	
-		}
+		add_action( 'wp_ajax_nopriv_wc_drop_shop_remove_item', array( $this, 'remove_item' ) );
+		add_action( 'wp_ajax_wc_drop_shop_remove_item', array( $this, 'remove_item' ) );
+		
+		add_action( 'wp_ajax_nopriv_wc_drop_shop_ajax_add_to_cart', array( $this, 'add_to_cart' ) );
+		add_action( 'wp_ajax_wc_drop_shop_ajax_add_to_cart', array( $this, 'add_to_cart' ) );	
 
 		return true;
 	}
@@ -164,7 +162,7 @@ class WC_Drop_Shop_Frontend_Ajax {
 
 				if ( $passed_validation ) {		
 					// if add to cart successfully
-					if ( WC()->cart->add_to_cart( $product_id, $quantity ) ) {		    						
+					if ( WC()->cart->add_to_cart( $product_id, $quantity ) ) {  						
 						$output = json_encode( array( 'added' => true, 'productType' => 'simple' ) );
 					} else {
 						$notices = wc_get_notices();
@@ -187,7 +185,7 @@ class WC_Drop_Shop_Frontend_Ajax {
 				// check if variation is set
 				if ( empty( $variation_id ) ) {
 					remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation_add_to_cart_button', 20 );
-					
+
 					// get the variation select dropdown html
 					ob_start();
 					wc_get_template( 'single-product/add-to-cart/variable.php', array(
