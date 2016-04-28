@@ -44,20 +44,21 @@ class WC_Drop_Shop_Frontend_Ajax {
 	 * @return string $output the HTML of the cart
 	 */
 	public function refresh() {
-
 		$nonce = $_POST['wc_drop_shop_ajax_refresh_cart'];
 
 		// bail if nonce don't match
 		if ( ! wp_verify_nonce( $nonce, 'wc_drop_shop_ajax_refresh_cart_nonce' ) ) {
-		     wp_die( __( 'Cheatin&#8217; huh?', 'woocommerce-drop-shop' ) );
-		 }
+			//wp_die( __( 'Cheatin&#8217; huh?', 'woocommerce-drop-shop' ) );
+		}
 
 		include( 'class-wc-drop-shop-helper.php' );
 
 		do_action( 'woocommerce_drop_shop_before_cart' );
 
 		$cart = '';
-
+		
+		WC()->cart->init();
+		
 		// get the dropshop template
 		ob_start();
 		
@@ -76,7 +77,7 @@ class WC_Drop_Shop_Frontend_Ajax {
 
 		// get the woocommerce mini cart template
 		ob_start();
-		wc_get_template( 'cart/mini-cart.php', array( 'list_class' => '' ) );
+		woocommerce_mini_cart();
 		$woocart_output = ob_get_clean();
 
 		$output = array( 'drop_shop' => $cart, 'woocart' => $woocart_output );
@@ -96,8 +97,8 @@ class WC_Drop_Shop_Frontend_Ajax {
 
 		// bail if nonce don't match
 		if ( ! wp_verify_nonce( $nonce, 'wc_drop_shop_ajax_remove_item_nonce' ) ) {
-		     wp_die( __( 'Cheatin&#8217; huh?', 'woocommerce-drop-shop' ) );
-		 }
+			//wp_die( __( 'Cheatin&#8217; huh?', 'woocommerce-drop-shop' ) );
+		}
 
 		$cart_id = $_POST['cart_id'];
 		$qty = absint( $_POST['qty'] );
@@ -131,8 +132,8 @@ class WC_Drop_Shop_Frontend_Ajax {
 
 		// bail if nonce don't match
 		if ( ! wp_verify_nonce( $nonce, 'wc_drop_shop_ajax_add_to_cart_nonce' ) ) {
-		     wp_die( __( 'Cheatin&#8217; huh?', 'woocommerce-drop-shop' ) );
-		 }
+			//wp_die( __( 'Cheatin&#8217; huh?', 'woocommerce-drop-shop' ) );
+		}
 
 		$product_id   = apply_filters( 'woocommerce_add_to_cart_product_id', $_POST['product_id'] );
 		$quantity     = empty( $_POST['quantity'] ) ? 1 : apply_filters( 'woocommerce_stock_amount', $_POST['quantity'] );
@@ -150,9 +151,11 @@ class WC_Drop_Shop_Frontend_Ajax {
 				// Add to cart validation
 				$passed_validation 	= apply_filters( 'woocommerce_add_to_cart_validation', true, $product_id, $quantity );
 
-				if ( $passed_validation ) {		
+				if ( $passed_validation ) {	
 					// if add to cart successfully
-					if ( WC()->cart->add_to_cart( $product_id, $quantity ) ) {  						
+					if ( WC()->cart->add_to_cart( $product_id, $quantity ) ) {
+						WC()->cart->maybe_set_cart_cookies();
+
 						$output = json_encode( array( 'added' => true, 'productType' => 'simple' ) );
 					} else {
 						$notices = wc_get_notices();
