@@ -49,7 +49,7 @@ class WC_Drop_Shop_Frontend_Ajax {
 
 		// bail if nonce don't match
 		if ( ! wp_verify_nonce( $nonce, 'wc_drop_shop_ajax_refresh_cart_nonce' ) ) {
-		     wp_die( 'No Way' );
+		     wp_die( __( 'Cheatin&#8217; huh?', 'woocommerce-drop-shop' ) );
 		 }
 
 		include( 'class-wc-drop-shop-helper.php' );
@@ -96,7 +96,7 @@ class WC_Drop_Shop_Frontend_Ajax {
 
 		// bail if nonce don't match
 		if ( ! wp_verify_nonce( $nonce, 'wc_drop_shop_ajax_remove_item_nonce' ) ) {
-		     wp_die( 'No Way' );
+		     wp_die( __( 'Cheatin&#8217; huh?', 'woocommerce-drop-shop' ) );
 		 }
 
 		$cart_id = $_POST['cart_id'];
@@ -131,7 +131,7 @@ class WC_Drop_Shop_Frontend_Ajax {
 
 		// bail if nonce don't match
 		if ( ! wp_verify_nonce( $nonce, 'wc_drop_shop_ajax_add_to_cart_nonce' ) ) {
-		     wp_die( 'No Way' );
+		     wp_die( __( 'Cheatin&#8217; huh?', 'woocommerce-drop-shop' ) );
 		 }
 
 		$product_id   = apply_filters( 'woocommerce_add_to_cart_product_id', $_POST['product_id'] );

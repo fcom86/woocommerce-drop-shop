@@ -59,12 +59,12 @@ class WC_Drop_Shop_Frontend {
 		
 		// set the localized variables
 		$localized_vars = array(
-			'ajaxurl'                 => admin_url( 'admin-ajax.php' ),
-			'wc_drop_shop_ajax_add_to_cart_nonce' => wp_create_nonce( 'wc_drop_shop_ajax_add_to_cart_nonce' ),
+			'ajaxurl'                              => admin_url( 'admin-ajax.php' ),
+			'wc_drop_shop_ajax_add_to_cart_nonce'  => wp_create_nonce( 'wc_drop_shop_ajax_add_to_cart_nonce' ),
 			'wc_drop_shop_ajax_refresh_cart_nonce' => wp_create_nonce( 'wc_drop_shop_ajax_refresh_cart_nonce' ),
-			'wc_drop_shop_ajax_remove_item_nonce' => wp_create_nonce( 'wc_drop_shop_ajax_remove_item_nonce' ),
-			'select_all_options_msg'  => apply_filters( 'woocommerce_drop_shop_select_all_options_msg', __( 'Please select all options before clicking on add to cart.', 'woocommerce-drop-shop' ) ),
-			'is_single'               => is_product() ? 'true' : 'false'
+			'wc_drop_shop_ajax_remove_item_nonce'  => wp_create_nonce( 'wc_drop_shop_ajax_remove_item_nonce' ),
+			'select_all_options_msg'               => apply_filters( 'woocommerce_drop_shop_select_all_options_msg', __( 'Please select all options before clicking on add to cart.', 'woocommerce-drop-shop' ) ),
+			'is_single'                            => is_product() ? 'true' : 'false'
 		);
 		
 		wp_localize_script( 'woocommerce-drop-shop-script', 'woocommerce_drop_shop_local', $localized_vars );	
