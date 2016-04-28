@@ -6206,13 +6206,7 @@ jQuery( document ).ready( function( $ ) {
 					// refresh the default woocommerce cart
 					$( '.widget_shopping_cart' ).html( response.woocart );
 
-					// if there are header cart info to update
-					if ( response.wooheadercart.length ) {
-						// artificer, wootique
-						$( 'a.cart-button' ).replaceWith( response.wooheadercart );
-						// mystile
-						$( 'a.cart-parent' ).replaceWith( response.wooheadercart );
-					}
+					$( 'body' ).trigger( 'refreshCart' );
 
 					$( '.woocommerce-drop-shop-dragdrop-spinner', mainContainer ).hide();
 					$( '.woocommerce-drop-shop-center-wrap', mainContainer ).removeClass( 'show-hot-zone' );

@@ -79,17 +79,7 @@ class WC_Drop_Shop_Frontend_Ajax {
 		wc_get_template( 'cart/mini-cart.php', array( 'list_class' => '' ) );
 		$woocart_output = ob_get_clean();
 
-		if ( function_exists( 'woocommerce_cart_link' ) ) {
-			// get the cart link info
-			ob_start();
-			woocommerce_cart_link();
-			$woo_header_cart_output = ob_get_clean();
-
-		} else {
-			$woo_header_cart_output = '';
-		}
-
-		$output = array( 'drop_shop' => $cart, 'woocart' => $woocart_output, 'wooheadercart' => $woo_header_cart_output );
+		$output = array( 'drop_shop' => $cart, 'woocart' => $woocart_output );
 		
 		wp_send_json( $output );
 	}
